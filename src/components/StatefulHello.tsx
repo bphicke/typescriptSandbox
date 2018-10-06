@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './Hello.css';
 
 export interface Props {
     name: string;
@@ -20,7 +21,7 @@ class Hello extends React.Component<Props, State> {
 
     render() {
         const { name } = this.props;
-
+        console.log('Render!')
         if (this.state.currentEnthusiasm <= 0) {
             throw new Error('You could be a little more enthusiastic. ;D');
         }
